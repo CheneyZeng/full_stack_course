@@ -1,0 +1,18 @@
+# fly.toml app configuration file generated for restless-morning-5227 on 2023-07-06T16:41:04-07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "restless-morning-5227"
+primary_region = "sea"
+
+[env]
+  PORT = "8080" # add this
+
+[experimental]
+  auto_rollback = true
+
+[[services]]
+  http_checks = []
+  internal_port = 8080 
+  processes = ["app"]
