@@ -1,0 +1,18 @@
+# fly.toml app configuration file generated for bold-shape-1995 on 2023-07-05T21:36:10-07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "bold-shape-1995"
+primary_region = "sea"
+
+[env]
+  PORT = "8080" # add this
+
+[experimental]
+  auto_rollback = true
+
+[[services]]
+  http_checks = []
+  internal_port = 8080 
+  processes = ["app"]
